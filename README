@@ -1,0 +1,7 @@
+```
+crontab:
+
+* */5 * * * run.sh /tmp/tun.lock mothership.server.com -R localhost:2222:localhost:22
+
+```
+
