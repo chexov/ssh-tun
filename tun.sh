@@ -6,7 +6,7 @@ pid=$1; shift
 server=$1; shift
 
 # check if lockfile has running process in it. exit if already running
-test -s $pid && kill -0 `<$pid` 2>/dev/null && exit 0
+test -s $pid && kill -0 $(cat $pid) 2>/dev/null && exit 0
 
 # lock with new PID
 echo $$ > "$pid"
