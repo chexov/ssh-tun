@@ -6,3 +6,11 @@ A: tun.sh /tmp/tun.lock mothership.server.com -R localhost:2222:localhost:22
 crontab:
 
 * */5 * * * tun.sh /tmp/tun.lock mothership.server.com -R localhost:2222:localhost:22
+
+
+```
+git clone https://github.com/chexov/ssh-tun.git
+cd ssh-tun/
+./tun.sh ./tun.lock dmzserver.com -R localhost:4422:localhost:22
+
+```
