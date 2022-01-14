@@ -1,0 +1,19 @@
+[Unit]
+Description=tun Server
+After=local-fs.target
+
+[Service]
+User=%i
+PAMName=systemd-user
+Type=notify
+ExecStart=/root/tun.sh
+#Slice=user-%i.slice
+KillMode=mixed
+Delegate=pids memory
+TasksMax=infinity
+TimeoutStopSec=120s
+KeyringMode=inherit
+
+[Install]
+WantedBy=multi-user.target
+
