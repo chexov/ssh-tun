@@ -18,5 +18,6 @@ cd ssh-tun/
 ```
 mkdir ~/bin/
 wget https://raw.githubusercontent.com/chexov/ssh-tun/master/tun.sh -O ~/bin/tun.sh
+chmod +x ~/bin/tun.sh
 
 ```
