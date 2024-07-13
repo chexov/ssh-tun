@@ -14,3 +14,9 @@ cd ssh-tun/
 ./tun.sh ./tun.lock dmzserver.com -R localhost:4422:localhost:22
 
 ```
+
+```
+mkdir ~/bin/
+wget https://raw.githubusercontent.com/chexov/ssh-tun/master/tun.sh ~/bin/tun.sh
+
+```
