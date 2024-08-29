@@ -1,14 +1,21 @@
-Q: How to quickly proxy SSH from server behind NAT?
-
-A:
+# Install
 
 ```
-wget 'https://raw.githubusercontent.com/chexov/ssh-tun/master/tun.sh' > tun.sh
+mkdir ~/bin/
+wget https://raw.githubusercontent.com/chexov/ssh-tun/master/tun.sh -O ~/bin/tun.sh
+chmod +x ~/bin/tun.sh
 
+```
+
+
+# How to quickly proxy SSH from server behind NAT?
+
+
+```
 tun.sh /tmp/tun.lock mothership.server.com -R localhost:2222:localhost:22
 ```
 
-crontab:
+edit crontab:
 
 ```
 * */5 * * * tun.sh /tmp/tun.lock mothership.server.com -R localhost:2222:localhost:22
@@ -19,12 +26,5 @@ crontab:
 git clone https://github.com/chexov/ssh-tun.git
 cd ssh-tun/
 ./tun.sh ./tun.lock dmzserver.com -R localhost:4422:localhost:22
-
-```
-
-```
-mkdir ~/bin/
-wget https://raw.githubusercontent.com/chexov/ssh-tun/master/tun.sh -O ~/bin/tun.sh
-chmod +x ~/bin/tun.sh
 
 ```
